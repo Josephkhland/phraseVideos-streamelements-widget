@@ -24,10 +24,11 @@ const containerElmt = document.querySelector(".main-container");
 const frames = Array.from(document.querySelectorAll(".frame"));
 const playbackOfFrame = new Map();  // Frames in use (incl. out-animation) -> their playback.
 let lastFrame = null;               // Prevents picking the same fixed frame twice in a row.
-let topZIndex = 0;                  // Raised for each clip, so the newest one is drawn on top.
+let topZIndex = 0;                  // Raised for each frame used, so the newest clip is drawn on top.
 let playedCount = 0;                // Clips played so far (for 'every Nth video').
 
-let frameLayout;                    // 'random' (spots picked by the code) or 'fixed' (HTML frames).
+let frameLayout;                    // 'random' (spots picked by the code), 'full' (whole widget,
+                                    // extra frames at random spots) or 'fixed' (HTML frames).
 let framesAtOnce;                   // How many frames show a clip that shows in several.
 let frameSizeMin;                   // Size range of random frames, in % of the widget.
 let frameSizeMax;
@@ -277,13 +278,26 @@ function chooseFrames() {
     return pickFixedFrames(free, count);
   }
 
-  // Random positions: add frames if too few are free.
+  // Random positions or whole widget: add frames if too few are free.
   while (free.length < count) {
     free.push(addFrame());
   }
   const chosen = free.slice(0, count);
   chosen.forEach(placeRandomly);
+
+  // The first frame (with the audio) covers the whole widget; any others are extra random spots.
+  if (frameLayout === "full") {
+    placeOverWholeWidget(chosen[0]);
+  }
   return chosen;
+}
+
+
+function placeOverWholeWidget(frame) {
+  frame.style.left = "0%";
+  frame.style.top = "0%";
+  frame.style.width = "100%";
+  frame.style.height = "100%";
 }
 
 
@@ -354,11 +368,12 @@ function startNext() {
     finished: false
   };
   queueBlocked = true;
-  topZIndex++;
 
   chosenFrames.forEach((frame, i) => {
     playbackOfFrame.set(frame, playback);
-    frame.style.zIndex = topZIndex;   // Over any clip that's still playing.
+    /* Over any clip that's still playing. Within a clip, the first frame is
+     * at the bottom, so extra spots show over a whole-widget frame. */
+    frame.style.zIndex = ++topZIndex;
     frame.pause();
     frame.src = url;
     frame.volume = clip.normalizedVolume;
@@ -545,15 +560,16 @@ function onWidgetLoad(obj) {
   console.log("Frame settings:", { frameLayout, displayMode, framesAtOnce,
       allFramesChance, allFramesEveryNth, frameSizeMin, frameSizeMax, overlapSec });
 
-  if ((frameLayout !== "random") && (frames.length === 0)) {
+  if ((frameLayout === "fixed") && (frames.length === 0)) {
     console.error('No frames found. Add <video class="frame"> elements to the HTML.');
     return;
   }
 
   frames.forEach(setUpFrame);
 
-  // With random positions, the HTML frames are reused; missing ones are added.
-  if (frameLayout === "random") {
+  /* Unless the frames are fixed, the HTML frames are just reused for other
+   * positions; missing ones are added. */
+  if (frameLayout !== "fixed") {
     while (frames.length < framesAtOnce) {
       addFrame();
     }

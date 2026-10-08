@@ -19,7 +19,7 @@ the message *"Hello everyone, good morning!"* plays the waving clip first and th
  - If a message contains several phrases, their videos play **one after another**, in the order the phrases appear in the message.  
    Videos triggered by later messages are added to the end of the same queue. Optionally, the next video can start a few seconds before the previous one ends.  
  - Each video has its own **cooldown**. A phrase that triggers a video during its cooldown is ignored (it isn't saved for later).
- - Videos appear in **frames**. By default each video gets a **random spot and size** inside the widget. You can also pin the frames to fixed places in the HTML.
+ - Videos appear in **frames**. By default each video gets a **random spot and size** inside the widget. Videos can also fill the **whole widget**, or use frames pinned to fixed places in the HTML.
  - Each video plays in **one frame**, or in **several frames** at once (you choose how many; the sound plays only once).
  - Optional **surprise** in one-frame mode: each video has a chance to show in several frames, and/or every Nth video always does.
 
@@ -80,22 +80,22 @@ A frame is a spot inside the widget where a video is shown. The **Frames** setti
 
 | Setting | What it does |
 |---|---|
-| **Frame positions** | *Random* (default): every time a video plays, each of its frames gets a new random size and spot inside the widget. Frames may overlap, and they don't have to cover the whole widget. *Fixed (from HTML)*: the frames stay where the HTML puts them (see [Fixed frames](#fixed-frames)). |
+| **Frame positions** | *Random* (default): every time a video plays, each of its frames gets a new random size and spot inside the widget. Frames may overlap, and they don't have to cover the whole widget. *Whole widget*: the video fills the whole widget. When it plays in several frames (by mode, chance or every-Nth), the extra frames appear at random spots on top of it. *Fixed (from HTML)*: the frames stay where the HTML puts them (see [Fixed frames](#fixed-frames)). |
 | **Show videos in** | *One frame* (default): each video plays in a single frame. With fixed positions, that's one of the HTML frames picked at random, never the same one twice in a row. *Several frames*: every video plays in several frames at once (see **Frames at once**). |
-| **Frames at once** | How many frames show a video when it plays in several. With fixed positions, that many of the free HTML frames are picked at random. If there aren't enough, all free ones are used. |
+| **Frames at once** | How many frames show a video when it plays in several. With *Whole widget*, this includes the whole-widget frame: `4` means the full video plus 3 extra spots. With fixed positions, that many of the free HTML frames are picked at random. If there aren't enough, all free ones are used. |
 | **Several-frames chance (%)** | Only in *One frame* mode. Each video has this chance to play in several frames instead of one. Decimals are allowed (e.g. `0.5` = about 1 in 200 videos). `0` turns it off. |
 | **Several frames every Nth video** | Only in *One frame* mode. E.g. `20` makes the 20th, 40th, 60th, ... video play in several frames. Counted from when the overlay was loaded. `0` turns it off. |
-| **Random frame size, min / max (%)** | Only with *Random* positions. Each frame gets a size between these two, in % of the widget's width and height. The frame has the same shape as the widget, and the video is fitted inside it keeping its proportions. Set both to the same number for frames that are always the same size. |
+| **Random frame size, min / max (%)** | Only with *Random* and *Whole widget* positions (for the extra spots). Each frame gets a size between these two, in % of the widget's width and height. The frame has the same shape as the widget, and the video is fitted inside it keeping its proportions. Set both to the same number for frames that are always the same size. |
 
 The chance and the every-Nth setting can be used together.
 
-**Sound:** when a video plays in several frames, only one of them plays the sound. The others are muted copies. The frame with the sound also decides when the video is over: when it ends, all frames animate out together.
+**Sound:** when a video plays in several frames, only one of them plays the sound (with *Whole widget*, the whole-widget frame). The others are muted copies. The frame with the sound also decides when the video is over: when it ends, all frames animate out together.
 
-Videos play **one at a time** (see the queue under [Features](#features)), no matter how many frames there are, unless **Start next video early** is set. Overlapping videos never share a frame: with random positions, new frames are added as needed. With fixed frames, the next video uses the free HTML frames, and waits if none are free. The newest video is always drawn on top.
+Videos play **one at a time** (see the queue under [Features](#features)), no matter how many frames there are, unless **Start next video early** is set. Overlapping videos never share a frame: with *Random* or *Whole widget* positions, new frames are added as needed. With fixed frames, the next video uses the free HTML frames, and waits if none are free. The newest video is always drawn on top.
 
 
 ## Fixed frames
-With **Frame positions** set to *Fixed (from HTML)*, the frames are the ones listed in the **HTML** tab, one `<video>` line per frame. (With *Random* positions, these lines are reused and their positions ignored; missing frames are added automatically.)
+With **Frame positions** set to *Fixed (from HTML)*, the frames are the ones listed in the **HTML** tab, one `<video>` line per frame. (With *Random* or *Whole widget* positions, these lines are reused and their positions ignored; missing frames are added automatically.)
 ```html
 <div class="main-container">
   <video class="frame" playsinline style="left: 0%;  top: 0%;  width: 50%; height: 50%;"></video>

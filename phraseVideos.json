@@ -178,6 +178,7 @@
     "label": "Frame positions:",
     "options": {
       "random": "Random",
+      "full": "Whole widget",
       "fixed": "Fixed (from HTML)"
     },
     "value": "random",
