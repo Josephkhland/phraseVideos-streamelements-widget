@@ -1,17 +1,21 @@
 .main-container {
+  position: relative;
   width: 100%;
   height: 100%;
 }
 
-#video {
-  width: 100%;
-  height: 100%;
+/* Position and size of each frame are set in the HTML. */
+.frame {
+  position: absolute;
+  visibility: hidden;       /* shown by the script while a video plays. */
   object-fit: contain;      /* centers the video. */
 }
 
-/* The animate.css library lacks classes that don't involve animations (for 
+/* The animate.css library lacks classes that don't involve animations (for
  * obvious reasons). Nevertheless, the lists in 'Fields' do include such options.
- * To compensate that I declared them here. */
+ * To compensate that I declared them here. Only name and timing are set: the
+ * 'animation' shorthand would also reset the duration and fill mode of
+ * '.animate__animated', and a frame would reappear after its out-animation. */
 @keyframes animate__noneIn {
   from {
     opacity: 0;
@@ -22,7 +26,8 @@
 }
 
 .animate__noneIn {
-  animation: animate__noneIn steps(1);
+  animation-name: animate__noneIn;
+  animation-timing-function: steps(1);
 }
 
 @keyframes animate__noneOut {
@@ -35,5 +40,6 @@
 }
 
 .animate__noneOut {
-  animation: animate__noneOut steps(1);
+  animation-name: animate__noneOut;
+  animation-timing-function: steps(1);
 }

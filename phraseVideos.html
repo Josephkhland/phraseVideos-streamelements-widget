@@ -2,6 +2,13 @@
 
 <script defer src="https://reboot0.de/hosted/js/se-tools.min.js"></script>
 
+<!-- Frames: the places where videos appear. Only used as placed here when
+     'Frame positions' is 'Fixed (from HTML)'; with 'Random', the widget picks
+     the spots itself. Positions and sizes are in % of the widget's box. Add,
+     remove or move frames as you like; each one needs class="frame". -->
 <div class="main-container">
-  <video id="video" playsinline></video>
+  <video class="frame" playsinline style="left: 0%;  top: 0%;  width: 50%; height: 50%;"></video>
+  <video class="frame" playsinline style="left: 50%; top: 0%;  width: 50%; height: 50%;"></video>
+  <video class="frame" playsinline style="left: 0%;  top: 50%; width: 50%; height: 50%;"></video>
+  <video class="frame" playsinline style="left: 50%; top: 50%; width: 50%; height: 50%;"></video>
 </div>
