@@ -90,8 +90,81 @@ In/out animation and their durations (in seconds). They play when a video starts
  - Consequently, if one message contains the same video's phrases twice (e.g. *"gm gm"*), the video plays only once (unless its cooldown is `0`).
 
 
+## Changing the number of video slots
+You can add or remove slots by editing the widget's code. Open the widget, click **Open editor**, make the changes below, then click **Done** and **Save** the overlay.
+
+A slot needs two things:
+ - **Its four fields in the FIELDS tab:** `videoN_phrases`, `videoN_url`, `videoN_volume` and `videoN_cooldown`, where `N` is the slot number.  
+ - **Its number counted in the JS tab**, through this line near the top:
+   ```js
+   const videoSlotCount = 50;
+   ```
+   The widget uses slots `video1` up to `video<videoSlotCount>`.
+
+Slots must be numbered **1, 2, 3, ...** without gaps, so always add or remove slots **at the end**.
+
+### Adding slots
+Example: adding Video #51.
+
+**1. FIELDS tab:** find the four `video50_...` blocks (the last slot), right before `"widgetName"`. Paste this directly after them, still before `"widgetName"`:
+```json
+  "video51_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #51"
+  }, 
+  "video51_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #51"
+  }, 
+  "video51_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #51"
+  }, 
+  "video51_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #51"
+  }, 
+```
+For more slots, paste the block again for each one, replacing every `51` with `52`, `53`, and so on (8 places per block).
+
+**2. JS tab:** set the count to the new highest slot number:
+```js
+const videoSlotCount = 51;
+```
+
+### Removing slots
+Example: going from 50 slots down to 20.
+
+**1. FIELDS tab:** delete the four blocks of every slot above 20 (`video21_phrases` through `video50_cooldown`). Everything from `"video21_phrases"` up to (but not including) `"widgetName"` goes.
+
+**2. JS tab:** set the count to the new highest slot number:
+```js
+const videoSlotCount = 20;
+```
+
+Removed slots' old settings may stay in the DATA tab. That does no harm, but you can set DATA to `{}` to clean it up. That also resets all other settings to their defaults, so only do it before configuring the widget.
+
+### If something goes wrong
+ - **The settings panel is empty or doesn't update:** the FIELDS JSON has a syntax error. Most often a comma is missing between two blocks (`}` followed by `"video..."`) or there's an extra one before the closing `}` of the file. Every block ends with `},` except the very last field, `widgetVersion`.  
+ - **A new slot shows up but never plays:** `videoSlotCount` is lower than its number, or its field names don't match its number (e.g. `video51_url` pasted as `video50_url`).  
+ - A count higher than the number of slots in FIELDS, or a slot's fields left in FIELDS above the count, doesn't break anything. Those slots just do nothing.
+
+
 ## Need more than 50 videos?
-Add the widget to your overlay again (repeat the [installation](#installation) steps) and configure the extra videos in the new copy. Each copy works independently, so keep in mind:
+Instead of [adding slots](#changing-the-number-of-video-slots), you can also add the widget to your overlay again (repeat the [installation](#installation) steps) and configure the extra videos in the new copy. Each copy works independently, so keep in mind:
  - **Each copy has its own queue.** Videos from different copies can play at the same time. Place the copies so they don't cover each other, or accept the overlap.  
  - **Don't use the same phrase in two copies**, or both copies will play a video for it.  
  - Permissions, blocked users and animations are set per copy, so set them the same way in each.  
