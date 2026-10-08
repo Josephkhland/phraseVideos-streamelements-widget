@@ -1,0 +1,1683 @@
+{
+  "permissionsMode": {
+    "type": "dropdown", 
+    "label": "Whose messages can trigger videos?", 
+    "options": {
+      "restricted": "Enforce the checkbox selection", 
+      "unrestricted": "Everyone (ignores checkboxes)"
+    }, 
+    "value": "unrestricted", 
+    "group": "Global settings"
+  }, 
+  "permissionLvl_mods": {
+    "type": "checkbox", 
+    "label": "Moderators", 
+    "value": true, 
+    "group": "Global settings"
+  }, 
+  "permissionLvl_vips": {
+    "type": "checkbox", 
+    "label": "VIPs", 
+    "value": true, 
+    "group": "Global settings"
+  }, 
+  "permissionLvl_subs1": {
+    "type": "checkbox", 
+    "label": "Sub Tier 1", 
+    "group": "Global settings"
+  }, 
+  "permissionLvl_subs2": {
+    "type": "checkbox", 
+    "label": "Sub Tier 2", 
+    "group": "Global settings"
+  }, 
+  "permissionLvl_subs3": {
+    "type": "checkbox", 
+    "label": "Sub Tier 3", 
+    "group": "Global settings"
+  }, 
+  "otherUsers": {
+    "type": "text", 
+    "label": "Additional users (comma separated):", 
+    "value": "", 
+    "group": "Global settings"
+  }, 
+  "blockedUsers": {
+    "type": "text", 
+    "label": "Blocked users (comma separated):", 
+    "value": "StreamElements", 
+    "group": "Global settings"
+  },
+  
+  "animationIn": {
+    "type": "dropdown", 
+    "label": "AnimationIn:", 
+    "options": {
+      "noneIn": "none", 
+      "backInDown": "backInDown", 
+      "backInLeft": "backInLeft", 
+      "backInRight": "backInRight", 
+      "backInUp": "backInUp", 
+      "bounceIn": "bounceIn", 
+      "bounceInDown": "bounceInDown", 
+      "bounceInLeft": "bounceInLeft", 
+      "bounceInRight": "bounceInRight", 
+      "bounceInUp": "bounceInUp", 
+      "fadeIn": "fadeIn", 
+      "fadeInBottomLeft": "fadeInBottomLeft", 
+      "fadeInBottomRight": "fadeInBottomRight", 
+      "fadeInDown": "fadeInDown", 
+      "fadeInDownBig": "fadeInDownBig", 
+      "fadeInLeft": "fadeInLeft", 
+      "fadeInLeftBig": "fadeInLeftBig", 
+      "fadeInRight": "fadeInRight", 
+      "fadeInRightBig": "fadeInRightBig", 
+      "fadeInTopLeft": "fadeInTopLeft", 
+      "fadeInTopRight": "fadeInTopRight", 
+      "fadeInUp": "fadeInUp", 
+      "fadeInUpBig": "fadeInUpBig", 
+      "flipInX": "flipInX", 
+      "flipInY": "flipInY", 
+      "jackInTheBox": "jackInTheBox", 
+      "lightSpeedInLeft": "lightSpeedInLeft", 
+      "lightSpeedInRight": "lightSpeedInRight", 
+      "rollIn": "rollIn", 
+      "rotateIn": "rotateIn", 
+      "rotateInDownLeft": "rotateInDownLeft", 
+      "rotateInDownRight": "rotateInDownRight", 
+      "rotateInUpLeft": "rotateInUpLeft", 
+      "rotateInUpRight": "rotateInUpRight", 
+      "slideInDown": "slideInDown", 
+      "slideInLeft": "slideInLeft", 
+      "slideInRight": "slideInRight", 
+      "slideInUp": "slideInUp", 
+      "zoomIn": "zoomIn", 
+      "zoomInDown": "zoomInDown", 
+      "zoomInLeft": "zoomInLeft", 
+      "zoomInRight": "zoomInRight", 
+      "zoomInUp": "zoomInUp"
+    }, 
+    "value": "bounceIn", 
+    "group": "Animation settings"
+  }, 
+  "timeIn": {
+    "type": "number", 
+    "label": "AnimationIn time in sec:", 
+    "min": 0, 
+    "value": 0.4, 
+    "group": "Animation settings"
+  }, 
+  "animationOut": {
+    "type": "dropdown", 
+    "label": "AnimationOut:", 
+    "options": {
+      "noneOut": "none", 
+      "backOutDown": "backOutDown", 
+      "backOutLeft": "backOutLeft", 
+      "backOutRight": "backOutRight", 
+      "backOutUp": "backOutUp", 
+      "bounceOut": "bounceOut", 
+      "bounceOutDown": "bounceOutDown", 
+      "bounceOutLeft": "bounceOutLeft", 
+      "bounceOutRight": "bounceOutRight", 
+      "bounceOutUp": "bounceOutUp", 
+      "fadeOut": "fadeOut", 
+      "fadeOutBottomLeft": "fadeOutBottomLeft", 
+      "fadeOutBottomRight": "fadeOutBottomRight", 
+      "fadeOutDown": "fadeOutDown", 
+      "fadeOutDownBig": "fadeOutDownBig", 
+      "fadeOutLeft": "fadeOutLeft", 
+      "fadeOutLeftBig": "fadeOutLeftBig", 
+      "fadeOutRight": "fadeOutRight", 
+      "fadeOutRightBig": "fadeOutRightBig", 
+      "fadeOutTopLeft": "fadeOutTopLeft", 
+      "fadeOutTopRight": "fadeOutTopRight", 
+      "fadeOutUp": "fadeOutUp", 
+      "fadeOutUpBig": "fadeOutUpBig", 
+      "flipOutX": "flipOutX", 
+      "flipOutY": "flipOutY", 
+      "lightSpeedOutLeft": "lightSpeedOutLeft", 
+      "lightSpeedOutRight": "lightSpeedOutRight", 
+      "rollOut": "rollOut", 
+      "rotateOut": "rotateOut", 
+      "rotateOutDownLeft": "rotateOutDownLeft", 
+      "rotateOutDownRight": "rotateOutDownRight", 
+      "rotateOutUpLeft": "rotateOutUpLeft", 
+      "rotateOutUpRight": "rotateOutUpRight", 
+      "slideOutDown": "slideOutDown", 
+      "slideOutLeft": "slideOutLeft", 
+      "slideOutRight": "slideOutRight", 
+      "slideOutUp": "slideOutUp", 
+      "zoomOut": "zoomOut", 
+      "zoomOutDown": "zoomOutDown", 
+      "zoomOutLeft": "zoomOutLeft", 
+      "zoomOutRight": "zoomOutRight", 
+      "zoomOutUp": "zoomOutUp"
+    }, 
+    "value": "bounceOut", 
+    "group": "Animation settings"
+  }, 
+  "timeOut": {
+    "type": "number", 
+    "label": "AnimationOut time in sec:", 
+    "min": 0, 
+    "value": 0.4, 
+    "group": "Animation settings"
+  },
+  
+  "video1_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #1"
+  }, 
+  "video1_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #1"
+  }, 
+  "video1_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #1"
+  }, 
+  "video1_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #1"
+  }, 
+  
+  "video2_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #2"
+  }, 
+  "video2_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #2"
+  }, 
+  "video2_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #2"
+  }, 
+  "video2_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #2"
+  }, 
+  
+  "video3_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #3"
+  }, 
+  "video3_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #3"
+  }, 
+  "video3_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #3"
+  }, 
+  "video3_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #3"
+  }, 
+  
+  "video4_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #4"
+  }, 
+  "video4_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #4"
+  }, 
+  "video4_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #4"
+  }, 
+  "video4_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #4"
+  }, 
+  
+  "video5_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #5"
+  }, 
+  "video5_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #5"
+  }, 
+  "video5_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #5"
+  }, 
+  "video5_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #5"
+  }, 
+  
+  "video6_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #6"
+  }, 
+  "video6_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #6"
+  }, 
+  "video6_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #6"
+  }, 
+  "video6_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #6"
+  }, 
+  
+  "video7_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #7"
+  }, 
+  "video7_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #7"
+  }, 
+  "video7_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #7"
+  }, 
+  "video7_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #7"
+  }, 
+  
+  "video8_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #8"
+  }, 
+  "video8_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #8"
+  }, 
+  "video8_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #8"
+  }, 
+  "video8_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #8"
+  }, 
+  
+  "video9_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #9"
+  }, 
+  "video9_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #9"
+  }, 
+  "video9_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #9"
+  }, 
+  "video9_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #9"
+  }, 
+  
+  "video10_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #10"
+  }, 
+  "video10_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #10"
+  }, 
+  "video10_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #10"
+  }, 
+  "video10_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #10"
+  }, 
+  
+  "video11_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #11"
+  }, 
+  "video11_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #11"
+  }, 
+  "video11_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #11"
+  }, 
+  "video11_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #11"
+  }, 
+  
+  "video12_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #12"
+  }, 
+  "video12_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #12"
+  }, 
+  "video12_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #12"
+  }, 
+  "video12_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #12"
+  }, 
+  
+  "video13_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #13"
+  }, 
+  "video13_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #13"
+  }, 
+  "video13_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #13"
+  }, 
+  "video13_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #13"
+  }, 
+  
+  "video14_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #14"
+  }, 
+  "video14_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #14"
+  }, 
+  "video14_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #14"
+  }, 
+  "video14_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #14"
+  }, 
+  
+  "video15_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #15"
+  }, 
+  "video15_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #15"
+  }, 
+  "video15_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #15"
+  }, 
+  "video15_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #15"
+  }, 
+  
+  "video16_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #16"
+  }, 
+  "video16_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #16"
+  }, 
+  "video16_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #16"
+  }, 
+  "video16_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #16"
+  }, 
+  
+  "video17_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #17"
+  }, 
+  "video17_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #17"
+  }, 
+  "video17_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #17"
+  }, 
+  "video17_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #17"
+  }, 
+  
+  "video18_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #18"
+  }, 
+  "video18_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #18"
+  }, 
+  "video18_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #18"
+  }, 
+  "video18_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #18"
+  }, 
+  
+  "video19_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #19"
+  }, 
+  "video19_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #19"
+  }, 
+  "video19_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #19"
+  }, 
+  "video19_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #19"
+  }, 
+  
+  "video20_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #20"
+  }, 
+  "video20_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #20"
+  }, 
+  "video20_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #20"
+  }, 
+  "video20_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #20"
+  }, 
+  
+  "video21_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #21"
+  }, 
+  "video21_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #21"
+  }, 
+  "video21_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #21"
+  }, 
+  "video21_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #21"
+  }, 
+  
+  "video22_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #22"
+  }, 
+  "video22_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #22"
+  }, 
+  "video22_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #22"
+  }, 
+  "video22_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #22"
+  }, 
+  
+  "video23_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #23"
+  }, 
+  "video23_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #23"
+  }, 
+  "video23_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #23"
+  }, 
+  "video23_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #23"
+  }, 
+  
+  "video24_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #24"
+  }, 
+  "video24_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #24"
+  }, 
+  "video24_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #24"
+  }, 
+  "video24_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #24"
+  }, 
+  
+  "video25_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #25"
+  }, 
+  "video25_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #25"
+  }, 
+  "video25_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #25"
+  }, 
+  "video25_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #25"
+  }, 
+  
+  "video26_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #26"
+  }, 
+  "video26_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #26"
+  }, 
+  "video26_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #26"
+  }, 
+  "video26_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #26"
+  }, 
+  
+  "video27_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #27"
+  }, 
+  "video27_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #27"
+  }, 
+  "video27_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #27"
+  }, 
+  "video27_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #27"
+  }, 
+  
+  "video28_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #28"
+  }, 
+  "video28_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #28"
+  }, 
+  "video28_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #28"
+  }, 
+  "video28_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #28"
+  }, 
+  
+  "video29_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #29"
+  }, 
+  "video29_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #29"
+  }, 
+  "video29_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #29"
+  }, 
+  "video29_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #29"
+  }, 
+  
+  "video30_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #30"
+  }, 
+  "video30_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #30"
+  }, 
+  "video30_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #30"
+  }, 
+  "video30_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #30"
+  }, 
+  
+  "video31_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #31"
+  }, 
+  "video31_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #31"
+  }, 
+  "video31_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #31"
+  }, 
+  "video31_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #31"
+  }, 
+  
+  "video32_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #32"
+  }, 
+  "video32_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #32"
+  }, 
+  "video32_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #32"
+  }, 
+  "video32_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #32"
+  }, 
+  
+  "video33_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #33"
+  }, 
+  "video33_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #33"
+  }, 
+  "video33_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #33"
+  }, 
+  "video33_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #33"
+  }, 
+  
+  "video34_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #34"
+  }, 
+  "video34_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #34"
+  }, 
+  "video34_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #34"
+  }, 
+  "video34_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #34"
+  }, 
+  
+  "video35_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #35"
+  }, 
+  "video35_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #35"
+  }, 
+  "video35_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #35"
+  }, 
+  "video35_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #35"
+  }, 
+  
+  "video36_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #36"
+  }, 
+  "video36_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #36"
+  }, 
+  "video36_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #36"
+  }, 
+  "video36_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #36"
+  }, 
+  
+  "video37_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #37"
+  }, 
+  "video37_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #37"
+  }, 
+  "video37_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #37"
+  }, 
+  "video37_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #37"
+  }, 
+  
+  "video38_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #38"
+  }, 
+  "video38_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #38"
+  }, 
+  "video38_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #38"
+  }, 
+  "video38_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #38"
+  }, 
+  
+  "video39_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #39"
+  }, 
+  "video39_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #39"
+  }, 
+  "video39_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #39"
+  }, 
+  "video39_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #39"
+  }, 
+  
+  "video40_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #40"
+  }, 
+  "video40_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #40"
+  }, 
+  "video40_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #40"
+  }, 
+  "video40_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #40"
+  }, 
+  
+  "video41_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #41"
+  }, 
+  "video41_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #41"
+  }, 
+  "video41_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #41"
+  }, 
+  "video41_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #41"
+  }, 
+  
+  "video42_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #42"
+  }, 
+  "video42_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #42"
+  }, 
+  "video42_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #42"
+  }, 
+  "video42_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #42"
+  }, 
+  
+  "video43_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #43"
+  }, 
+  "video43_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #43"
+  }, 
+  "video43_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #43"
+  }, 
+  "video43_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #43"
+  }, 
+  
+  "video44_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #44"
+  }, 
+  "video44_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #44"
+  }, 
+  "video44_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #44"
+  }, 
+  "video44_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #44"
+  }, 
+  
+  "video45_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #45"
+  }, 
+  "video45_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #45"
+  }, 
+  "video45_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #45"
+  }, 
+  "video45_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #45"
+  }, 
+  
+  "video46_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #46"
+  }, 
+  "video46_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #46"
+  }, 
+  "video46_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #46"
+  }, 
+  "video46_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #46"
+  }, 
+  
+  "video47_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #47"
+  }, 
+  "video47_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #47"
+  }, 
+  "video47_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #47"
+  }, 
+  "video47_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #47"
+  }, 
+  
+  "video48_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #48"
+  }, 
+  "video48_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #48"
+  }, 
+  "video48_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #48"
+  }, 
+  "video48_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #48"
+  }, 
+  
+  "video49_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #49"
+  }, 
+  "video49_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #49"
+  }, 
+  "video49_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #49"
+  }, 
+  "video49_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #49"
+  }, 
+  
+  "video50_phrases": {
+    "type": "text", 
+    "label": "Phrases (separate with |):", 
+    "value": "", 
+    "group": "Video #50"
+  }, 
+  "video50_url": {
+    "type": "video-input", 
+    "label": "Video:", 
+    "multiple": false, 
+    "group": "Video #50"
+  }, 
+  "video50_volume": {
+    "type": "slider", 
+    "label": "Volume:", 
+    "min": 0, 
+    "max": 100, 
+    "value": 50, 
+    "step": 1, 
+    "group": "Video #50"
+  }, 
+  "video50_cooldown": {
+    "type": "number", 
+    "label": "Cooldown in sec for this video:", 
+    "min": 0, 
+    "value": 60, 
+    "step": 1, 
+    "group": "Video #50"
+  }, 
+  
+  "widgetName": {
+    "type": "hidden",
+    "value": "PhraseVideos", 
+    "group": "Widget Data"
+  }, 
+  "widgetAuthor": {
+    "type": "hidden",
+    "value": "Benno, avoeh, Suerion", 
+    "group": "Widget Data"
+  }, 
+  "widgetVersion": {
+    "type": "hidden", 
+    "value": 1, 
+    "group": "Widget Data"
+  }
+}
